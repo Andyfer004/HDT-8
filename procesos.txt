@@ -1,0 +1,4 @@
+chrome,oscar22,5
+epicgamelauncher,gabito69,-10
+skype,japo3300,20
+teams,nelsin0,-20
