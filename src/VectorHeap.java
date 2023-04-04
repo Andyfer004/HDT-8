@@ -1,13 +1,21 @@
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * VectorHeap
+ * @param <E>
+ */
 public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E> {
     private List<E> data;
-
+/**
+     * Constructor
+     */
     public VectorHeap() {
         data = new ArrayList<>();
     }
-
+/**
+     * Inserta un elemento en el heap
+     * @param value
+     */
     @Override
     public void insert(E value) {
         data.add(value);
@@ -19,12 +27,18 @@ public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E> {
             index = (index - 1) / 2;
         }
     }
-
+/**
+     * Devuelve el elemento con mayor prioridad
+     * @return
+     */
     @Override
     public E get() {
         return data.get(0);
     }
- 
+ /**
+     * Elimina el elemento con mayor prioridad
+     * @return
+     */
     @Override
     public E remove() {
         E result = data.get(0);
@@ -54,12 +68,18 @@ public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<E> {
         }
         return result;
     }
-
+/**
+     * Devuelve la cantidad de elementos en el heap
+     * @return
+     */
     @Override
     public int count() {
         return data.size();
     }
-
+/**
+     * Devuelve true si el heap esta vacio
+     * @return
+     */
     @Override
     public boolean isEmpty() {
         return data.isEmpty();

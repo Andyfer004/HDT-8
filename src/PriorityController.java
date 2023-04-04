@@ -4,7 +4,11 @@ import java.util.PriorityQueue;
 
 
 public class PriorityController {
-
+/**
+     * Ordena los procesos por prioridad
+     * @param procesos
+     * @return
+     */
     public static List<Task> usingPriorityQueueJCF(List<Task> procesos) {
         PriorityQueue<Task> priorityQueue = new PriorityQueue<>(procesos);
 
@@ -14,7 +18,11 @@ public class PriorityController {
         }
         return sortedProcesses;
     }
-
+/**
+     * Ordena los procesos por prioridad
+     * @param procesos
+     * @return
+     */
     public static List<Task> usingVectorHeap(List<Task> procesos){
         
         VectorHeap<Task> vectorHeap = new VectorHeap<>();
