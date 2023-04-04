@@ -30,6 +30,7 @@ public class Main {
             System.out.println("Error al leer el archivo");
             return;
         }
+        System.out.println(" ");
         System.out.println("-------- ChichicasteLinux--------");
         System.out.println("Seleccione porfavor que implementacion desea utilizar:");
         System.out.println("1. JCF PriorityQueue");
@@ -66,6 +67,7 @@ public class Main {
                 
                 
             }
+            System.out.println(" ");
             System.out.println("-------- ChichicasteLinux--------");
             System.out.println("Seleccione porfavor que implementacion desea utilizar:");
             System.out.println("1. JCF PriorityQueue");
