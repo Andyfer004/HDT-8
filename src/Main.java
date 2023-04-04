@@ -12,7 +12,14 @@ Fecha: 29/03/2023
 
 
 public class Main {
+    /**Empieza el programa
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
+        /**Se lee el archivo y se almacenan los procesos en una lista
+         * Se le pregunta al usuario que implementacion desea utilizar
+         * Se le muestra al usuario los procesos ordenados
+         */
         String archivo = "procesos.txt";
         Scanner scanner = new Scanner(System.in);
         List<Task> procesosEnlistados;
@@ -30,7 +37,9 @@ public class Main {
         System.out.println("3. Salir");
         
         int option = scanner.nextInt();
-
+/**
+ * se realiza un switch para que el usuario pueda elegir la implementacion que desea utilizar
+ */
         while(option!=3){
             
             switch (option){

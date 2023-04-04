@@ -6,12 +6,21 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 	private int _count;
 	private TreeNode<P, V> _root;
 	private Comparator<P> _priorityComparator;
-	
+
+	/**
+	 * Constructor
+	 * @param priorityComparator
+	 */
 	public HeapUsingIterativeBinaryTree(Comparator<P> priorityComparator) {
 		_count = 0;
 		_priorityComparator = priorityComparator;
 	}
-	
+
+	/**
+	 * Devuelve la cantidad de elementos en el heap
+	 * @param priority
+	 * @param value
+	 */
 	@Override
 	public void Insert(P priority, V value) {
 		TreeNode<P, V> newNode = new TreeNode<P, V>(priority, value);
@@ -60,7 +69,12 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 		}
 		
 	}
-	
+
+	/**
+	 * Devuelve el elemento con mayor prioridad
+	 * @param value
+	 * @return
+	 */
 	private byte[] convertToBinary(int value) {
 		
 		ArrayList<Byte> listBytes = new ArrayList<Byte>();
@@ -79,7 +93,11 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 		
 		return binaryBytes;
 	}
-	
+
+	/**
+	 * Elimina el elemento con mayor prioridad
+	 * @param actualNode
+	 */
 	private void Swap(TreeNode<P, V> actualNode) {
 		if (actualNode != null) {
 			
@@ -102,8 +120,11 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 			
 		}
 	}
-	
 
+	/**
+	 * Devuelve la cantidad de elementos en el heap
+	 * @return
+	 */
 	@Override
 	public V get() {
 		if (isEmpty())
@@ -111,7 +132,10 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 		else 
 			return _root.get_value();
 	}
-
+/**
+	 * Elimina el elemento con mayor prioridad
+	 * @return
+	 */
 	@Override
 	public V remove() {
 		
@@ -280,12 +304,18 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 		
 		return tempValue;
 	}
-
+	/** reallocate the array to a new size
+	 * @return the _root
+	 */
 	@Override
 	public int count() {
 		return _count;
 	}
 
+	/**
+	 * hace un recorrido en preorden
+	 * @return
+	 */
 	@Override
 	public boolean isEmpty() {
 		return _count == 0;

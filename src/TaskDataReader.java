@@ -5,7 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskDataReader {
-
+    /**
+     * Lee el archivo y almacena los procesos en una lista
+     * @param file
+     * @return
+     * @throws IOException
+     */
     public static List<Task> getProcesos(String file) throws IOException {
         List<Task> procesos = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
